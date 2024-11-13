@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Risque&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,389 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+* {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensures video doesn't overflow the container */
+  z-index: -1;      /* Keep the video behind all other content */
+}
+
+#bgVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures the video covers the entire background */
+  transform: translate(-50%, -50%);
+  filter: brightness(0.4);
+}
+.nav-bar {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.namaste {
+  color: #FFF;
+  font-family: Lora;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 100;
+  letter-spacing: 14px;
+  margin: 10px 0px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.N {
+  font-size: 80px;
+}
+
+.I {
+  font-size: 80px;
+}
+
+.menu {
+  height: 100px;
+  font-size: 22px;
+  color: #FFF;
+  display: flex;
+  width: 680px;
+  justify-content: space-evenly;
+  font-family: 'Roboto', sans-serif;
+  align-items: flex-end;
+  overflow: hidden;
+  margin-right: 20px;
+  
+  p:hover {
+    color: grey;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+}
+
+.menu p {
+  cursor: pointer;
+}
+.main {
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  /* align-items: start; */
+  padding-top: 0px;
+
+}
+
+.discover {
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 120px;
+  font-weight: 500;
+  margin-top: 0px;
+  width: 1100px;
+  margin-left: 30px;
+  height: 380px;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.embark {
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  margin-top: 0px;
+  margin-left: 35px;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  letter-spacing: 3px;
+  
+}
+
+.button{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  
+}
+
+.explore{
+  border: 3px solid #FFF;
+  padding: 10px;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 500;
+
+}
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navigation Menu */
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  width: 680px;
+  justify-content: flex-end;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu button:hover {
+  color: #808080;
+  transform: scale(1.1);
+}
+
+/* Main Content Layout */
+.main-content {
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+
+/* Left Image Section */
+.image-section {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.image-section img {
+  width: 100%;
+  height: 99.4%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.2) 0%, transparent 100%);
+}
+
+/* Right Content Section */
+.content-section {
+  position: relative;
+  width: 50%;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-section h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content-section p {
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.explore-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.explore-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu {
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .image-section,
+  .content-section {
+    width: 100%;
+  }
+
+  .image-section {
+    height: 50vh;
+  }
+
+  .content-section {
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .content-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .content-section p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 1rem;
+  }
+
+  .menu button {
+    font-size: 1rem;
+  }
+
+  .content-section h1 {
+    font-size: 2rem;
+  }
+
+  .content-section p {
+    font-size: 1rem;
+  }
+}
+.watermark-image_arts{
+  position: absolute;
+  left: 25%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+
+
+  background: url('/public/traditionalartswm.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.2; /* Adjust this value to make the image lighter or darker */
+  z-index: 0; /* Place it below all other elements */
+  pointer-events: none; /* Ensure it doesn't interfere with other content */
+}
+.watermark-image_food{
+  position: absolute;
+  left: 25%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+
+
+  background: url('/public/traditionalcuisinewm.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.2; /* Adjust this value to make the image lighter or darker */
+  z-index: 0; /* Place it below all other elements */
+  pointer-events: none; /* Ensure it doesn't interfere with other content */
+}
+
+.watermark-image_cal {
+  position: absolute;
+  left: 0;          /* Changed from 23% to 0 to cover full width */
+  top: 0;
+  width: 100vw;     /* Using viewport width for full coverage */
+  height: 100vh;    /* Using viewport height for full coverage */
+  background: url('/public/calwm.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.15;    /* Slightly reduced opacity from 0.2 */
+  z-index: 0;
+  pointer-events: none;
+  filter: brightness(0.8) blur(1px);  /* Added subtle blur and brightness adjustment */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

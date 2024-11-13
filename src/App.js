@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FrontPage from './frontPage';
+import TraditionalArt from './TraditionalArt';
+import TraditionalCuisine from './TraditionalCuisine';
+import Calender from './Calender';
+import Arts from './Arts';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/traditional-arts" element={<TraditionalArt />} />
+          <Route path="/traditional-cuisine" element={<TraditionalCuisine />} />
+          <Route path="/calendar" element={<Calender />} />
+          {/* If you want to include Arts component, add it as a route */}
+          <Route path="/arts" element={<Arts />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
